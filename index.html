@@ -46,7 +46,19 @@
 
     <!-- Parte centrale di calcolo biglietto -->
     <main>
-
+        <div class="container">
+            <h1 class="text-center">Calcola il prezzo del tuo biglietto!</h1>
+            <div id="biglietto-input">
+                <div class="col-6">
+                    <input id="input-km" type="text" placeholder="Inserisci il numero di KM">
+                </div>
+                <div class="col-6">
+                    <input id="input-eta" type="text" placeholder="Inserisci l'eta del passeggero">
+                </div>
+                <button onclick="calcoloBiglietto()">Verifica il prezzo!</button>
+                <h2 class="text-center" id="root"></h2>
+            </div>
+        </div>
     </main>
     <!-- Parte centrale di calcolo biglietto -->
 
