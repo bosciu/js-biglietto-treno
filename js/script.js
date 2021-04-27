@@ -17,12 +17,19 @@ function calcoloBiglietto() {
     /* Calcolo prezzo del biglietto */
     var prezzoBiglietto = (numeroKm * prezzo).toFixed(2);
 
+    outputPrice.innerHTML = "Il prezzo totale è di € " + prezzoBiglietto;
+
     /* Sconto*/
     if (etaPasseggero < 18) {
-        var prezzoBiglietto = (prezzoBiglietto - (prezzoBiglietto * (20 / 100))).toFixed(2);
+        var prezzoBigliettoScontato = (prezzoBiglietto - (prezzoBiglietto * (20 / 100))).toFixed(2);
+
+        outputPrice.innerHTML = "Dato che il passeggiero è minorenne, il totale di € " + prezzoBiglietto + " è stato scontato del 20%, per un totale di € " + prezzoBigliettoScontato;
+
     } else if (etaPasseggero > 65) {
-        var prezzoBiglietto = (prezzoBiglietto - (prezzoBiglietto * (40 / 100))).toFixed(2);
+        var prezzoBigliettoScontato = (prezzoBiglietto - (prezzoBiglietto * (40 / 100))).toFixed(2);
+
+        outputPrice.innerHTML = "Dato che il passeggiero è over 65, il totale di € " + prezzoBiglietto + " è stato scontato del 40%, per un totale di € " + prezzoBigliettoScontato;
     }
 
-    outputPrice.innerHTML = "Il prezzo totale è di € " + prezzoBiglietto;
+    document.getElementById("buy-now").style.display = "block";
 }

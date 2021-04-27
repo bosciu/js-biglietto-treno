@@ -50,13 +50,14 @@
             <h1 class="text-center">Calcola il prezzo del tuo biglietto!</h1>
             <div id="biglietto-input">
                 <div class="col-6">
-                    <input id="input-km" type="text" placeholder="Inserisci il numero di KM">
+                    <input id="input-km" type="number" placeholder="Inserisci il numero di KM">
                 </div>
                 <div class="col-6">
-                    <input id="input-eta" type="text" placeholder="Inserisci l'eta del passeggero">
+                    <input id="input-eta" type="number" placeholder="Inserisci l'eta del passeggero">
                 </div>
-                <button onclick="calcoloBiglietto()">Verifica il prezzo!</button>
+                <button class="btn" onclick="calcoloBiglietto()">Verifica il prezzo!</button>
                 <h2 class="text-center" id="root"></h2>
+                <button class="btn" id="buy-now">Acquista ora!</button>
             </div>
         </div>
     </main>
