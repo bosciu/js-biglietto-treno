@@ -1,10 +1,5 @@
 /* Debug */
 
-main {
-    background-color: lightgreen;
-    height: 600px;
-}
-
 
 /* Debug */
 
@@ -25,6 +20,7 @@ body {
     max-width: 1320px;
     margin: auto;
     height: 100%;
+    padding: 0 15px;
 }
 
 .flex {
@@ -100,6 +96,11 @@ header {
 
 /* Main */
 
+main {
+    background-color: lightgreen;
+    height: 600px;
+}
+
 #biglietto-input {
     position: relative;
     width: 100%;
@@ -143,4 +144,51 @@ header {
 
 input::placeholder {
     text-align: center;
+}
+
+
+/* Footer */
+
+footer {
+    padding: 10px 0;
+}
+
+footer>i {
+    color: red;
+}
+
+
+/* Hover */
+
+li:hover {
+    text-decoration: underline;
+    color: #c03;
+}
+
+
+/* Media Query */
+
+@media screen and (max-width: 1199px) {
+    body {
+        font-size: 15px;
+    }
+    .container {
+        max-width: 960px;
+    }
+    #buy-now {
+        top: 40%;
+    }
+    #second-list>img {
+        height: 80%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .container {
+        width: 100%;
+        padding: 0;
+    }
+    #biglietto-input>h2 {
+        width: 80%;
+    }
 }
